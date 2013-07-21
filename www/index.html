@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery.js"></script>
+        <title>Hello Perugia!!!</title>
+    </head>
+    <body>
+        <div class="app4"></div>
+		<div class="app3"></div>
+		<div class="app2"></div>
+
+
+			<script type="text/javascript">
+				$(document).bind('mousemove', function(e){
+					//$('.app').animate({left: '-='+e.pageX, top: '-='+e.pageY}, 'slow');
+					setTimeout(function(){$('.app').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 50);
+					setTimeout(function(){$('.app2').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 50);
+					setTimeout(function(){$('.app3').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 100);
+					setTimeout(function(){$('.app4').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 150);
+				});
+			</script>
+            
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
