@@ -15,15 +15,7 @@
 
 
 			<script type="text/javascript">
-				var element = document.getElementsByTagName("body")[0];
-				element.addEventListener( "touchstart", function(e){ onStart(e); }, false );
-				function onStart ( touchEvent ) {
-				  if( navigator.userAgent.match(/Android/i) ) {
-					touchEvent.preventDefault();
-				  }
-				}
-			
-				$(document).bind('touchmove mousemove', function(e){
+				$(document).bind('mousemove', function(e){
 					//$('.app').animate({left: '-='+e.pageX, top: '-='+e.pageY}, 'slow');
 					setTimeout(function(){$('.app2').css({
 					   left:  e.pageX ,
@@ -38,6 +30,28 @@
 					   top:   e.pageY
 					})}, 180);
 				});
+				
+				
+				$(document).bind('touchmove', function(e){
+					//$('.app').animate({left: '-='+e.pageX, top: '-='+e.pageY}, 'slow');
+					e.preventDefault();
+					var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+					
+					setTimeout(function(){$('.app2').css({
+					   left:  touch.pageX ,
+					   top:   touch.pageY
+					})}, 50);
+					setTimeout(function(){$('.app3').css({
+					   left:  touch.pageX ,
+					   top:   touch.pageY
+					})}, 130);
+					setTimeout(function(){$('.app4').css({
+					   left:  touch.pageX ,
+					   top:   touch.pageY
+					})}, 180);
+				});
+				
+				
 			</script>
             
         </div>
