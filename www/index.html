@@ -34,6 +34,25 @@
 					   top:   e.pageY
 					})}, 150);
 				});
+				$(document).bind('touchmove', function(e){
+					//$('.app').animate({left: '-='+e.pageX, top: '-='+e.pageY}, 'slow');
+					setTimeout(function(){$('.app').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 50);
+					setTimeout(function(){$('.app2').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 50);
+					setTimeout(function(){$('.app3').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 100);
+					setTimeout(function(){$('.app4').css({
+					   left:  e.pageX ,
+					   top:   e.pageY
+					})}, 150);
+				});
 			</script>
             
         </div>
